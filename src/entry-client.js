@@ -1,7 +1,7 @@
-import Vue from 'vue'
-import App from './App.vue'
+import { createApp } from './main.js';
+// client-specific bootstrapping logic...
 
-new Vue({
-  el: '#app',
-  render: h => h(App)
-})
+const { app } = createApp()
+
+//this assumes App.vue template root element has 'id="app"'
+app.$mount( '#app' )
